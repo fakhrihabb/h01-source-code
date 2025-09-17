@@ -10,7 +10,7 @@ import (
 
 const (
 	serverIP   = ""
-	serverPort = "54321"
+	serverPort = "3206"
 	serverType = "udp4"
 	bufferSize = 2048
 )
