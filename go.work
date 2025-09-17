@@ -1,0 +1,15 @@
+go 1.21.0
+
+use (
+	./project/publisher
+	./project/subscriber
+	./project/utils
+	./samples/codec
+	./samples/quic/client
+	./samples/quic/server
+	./samples/quic/utils
+	./samples/tcp/client
+	./samples/tcp/server
+	./samples/udp/client
+	./samples/udp/server
+)
