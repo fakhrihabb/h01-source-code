@@ -7,6 +7,7 @@ import (
 	"io"
 	"log"
 	"net"
+	"time"
 
 	"github.com/quic-go/quic-go"
 	"jarkom.cs.ui.ac.id/h01/project/utils"
@@ -117,6 +118,9 @@ func handleStream(clientAddress net.Addr, stream quic.Stream) {
 		} else {
 			fmt.Printf("[quic] ACK sent for Transaction ID %d\n", packet.TransactionId)
 		}
+
+		// Give the client time to read the ACK before closing
+		time.Sleep(100 * time.Millisecond)
 	}
 
 	stream.Close()
